@@ -1,0 +1,27 @@
+.counterContainer {
+    display: block;
+    padding: 5px;
+}
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px black;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.itemCountButton{
+    padding: 5px;
+}
+
+.itemCount{
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: rgb(191, 236, 232);
+    border: solid 1px black;
+}
