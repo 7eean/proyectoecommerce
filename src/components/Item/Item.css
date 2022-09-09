@@ -1,10 +1,5 @@
 .item-container {
-    display: ruby;
-    padding: 1.55em;
+    display: inline-block;
+    padding: 4em;
 }
-
-.item{
-    height: 540px;
-}
-
 

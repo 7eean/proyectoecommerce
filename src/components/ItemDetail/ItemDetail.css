@@ -1,0 +1,49 @@
+.itemDetail{
+    display: grid;
+    grid-template-areas: "itemImg" "description-container"
+    "itemImg" "description-container";
+}
+
+.itemImg{
+    grid-area: itemImg;
+    position: relative;
+    right: 350px;
+}
+
+.description-container{
+    grid-area: description-container;
+    display: inline-block;
+    
+}
+
+.itemTitle{
+    grid-area: h2;
+}
+
+.itemDesc{
+    grid-area: descripcion;
+}
+
+.itemPrice{
+    grid-area: precio;
+}
+
+.itemOrigin{
+    grid-area: origen;
+}
+
+.itemPais{
+    grid-area: pais;
+}
+
+.itemProduct{
+    grid-area: tipo;
+}
+
+.itemYear{
+    grid-area: anio;
+}
+
+.itemGraduation{
+    grid-area: graduacion;
+}

@@ -1,16 +1,29 @@
-import ItemCount from "../ItemCount/ItemCount";
+import React from "react";
 import './ItemListContainer.css';
-import ItemList from "../ItemList/ItemList"
+import data from "../ItemList/mockData";
+import ItemList from "../ItemList/ItemList";
+import { useEffect, useState } from "react";
 
+const ItemListContainer = () => {
+    const [items, setItems] = useState([]);
 
-const ItemListContainer = ({greeting}) => {
+    const getItems = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(data);
+        }, 2000);
+    });
+
+    useEffect(() => {
+        getItems.then((result) => {
+            setItems(result);
+        })
+    }, []);
+
     return (
         <div className="itemListContainer">
-            <p>{greeting}</p>
-            <ItemCount nombreProducto='Wines' stock="10" initial="1"/>
-            <ItemList />
+            <ItemList itemsList={items}/>
         </div>
-    )
+    );
 }
 
 export default ItemListContainer;
