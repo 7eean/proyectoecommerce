@@ -1,5 +1,5 @@
 import './NavBar.css';
-import logo from '../../logo.svg';
+import logo from './logo01.png';
 import CartWidget from '../Cart/CartWidget';
 
 const NavBar = () => {
@@ -8,18 +8,18 @@ const NavBar = () => {
             <nav>
                 <ul>
                     <li>
-                            <a href='#'>Home</a>
-                        </li>
-                        <li>
-                            <a href='#'>Bebidas</a>
-                        </li>
-                        <li>
-                            <a href='#'>Bodegas</a>
+                        <a href='#'>Home</a>
+                    </li>
+                    <li>
+                        <a href='#'>Bebidas</a>
+                    </li>
+                    <li>
+                        <a href='#'>Bodegas</a>
                     </li>
                 </ul>
             </nav>
             <div>
-                <img width={'80px'} src={logo} alt="logo" />
+                <img width={'110px'} src={logo} alt="logo" />
             </div>
             <div></div>
             <div>
