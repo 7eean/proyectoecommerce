@@ -11,7 +11,7 @@ const ItemDetailList = ({itemsList}) => {
                         description={item.description} 
                         pictureUrl={item.pictureUrl} 
                         price={item.price} 
-                        key={item.id} 
+                        key={id} 
                         origin={item.origin}
                         year={item.year}
                         pais={item.pais}

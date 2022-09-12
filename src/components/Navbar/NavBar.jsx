@@ -1,25 +1,32 @@
 import './NavBar.css';
-import logo from './logo01.png';
+import logo from './logo03.png';
 import CartWidget from '../Cart/CartWidget';
+import {Link, NavLink} from 'react-router-dom';
 
 const NavBar = () => {
     return (
-        <><div className='navbar-container'>
+        <><p className='textNav'>Envios internacionales. Pagá con el método de pago que prefieras.</p>
+        <div className='navbar-container'>
             <nav>
                 <ul>
                     <li>
-                        <a href='#'>Home</a>
+                        <NavLink to={"/"}>Home</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Bebidas</a>
+                        <NavLink to={"/productos"}>Timepieces</NavLink>
                     </li>
                     <li>
-                        <a href='#'>Bodegas</a>
+                        <NavLink to={"/"}>Contacto</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to={"/productos/exclusivos"}>Partnerships</NavLink>
                     </li>
                 </ul>
             </nav>
             <div>
-                <img width={'110px'} src={logo} alt="logo" />
+                <Link to={"/"}>
+                    <img width={'235px'} src={logo} alt="logo" />
+                </Link>
             </div>
             <div></div>
             <div>
