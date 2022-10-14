@@ -2,7 +2,7 @@ import React from "react";
 import './ItemCount.css';
 import { useState } from "react";
 
-const ItemCount = ({nombreProducto, stock, initial}) => {
+const ItemCount = ({nombreProducto, stock, initial, onAdd}) => {
     
     const [ItemCount, setItemCount] = useState(initial);
         const sumar = () => {
@@ -23,11 +23,11 @@ const ItemCount = ({nombreProducto, stock, initial}) => {
     return (
         <div className="counterContainer">
             <div className="counter">
-                <div className="itemCountButton" onClick={restar}><h2>-</h2></div>
+                <div className="itemCountButton" disabled={stock === 0} onClick={restar}><h2>-</h2></div>
                 <div className="itemCount">{ItemCount}</div>
-                <div className="itemCountButton" onClick={sumar}><h2>+</h2></div>
+                <div className="itemCountButton" disabled={stock === 0} onClick={sumar}><h2>+</h2></div>
             </div>
-            <button>Agregar al carrito</button>
+            <button disabled={stock === 0} onClick={() => onAdd(ItemCount)}>Agregar al carrito</button>
         </div>
     );
 }

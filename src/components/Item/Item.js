@@ -1,7 +1,6 @@
 import './Item.css';
 import ItemCount from "../ItemCount/ItemCount";
 import {Link} from 'react-router-dom';
-// import data from '../ItemList/mockData';
 
 const Item = ({title, pictureUrl, price, id}) => {
   return (

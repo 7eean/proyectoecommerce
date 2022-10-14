@@ -1,34 +1,44 @@
 import React from "react";
 import './ItemListContainer.css';
-import data from "../ItemList/mockData";
 import ItemList from "../ItemList/ItemList";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { database } from '../../utils/firebase';
 
 const ItemListContainer = () => {
+    const {product} = useParams();
 
-    const {categoryId} = useParams();
-
-
-    const [items, setItems] = useState([]);
-
-    const getItems = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(data);
-        }, 2000);
-    });
+    const [items, setItems] = useState();
 
     useEffect(() => {
-        getItems.then((result) => {
-            if(categoryId){
-                const newProducts = result.filter(item=>item.product === categoryId);
-                setItems(newProducts); 
+        const getData = async() => {
+            if(product) {
+                const queryRef = query(collection(database, "items"), where("product", "==", product))
+                const response = await getDocs(queryRef)
+                const data = response.docs.map ( doc => {
+                    const items = {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                    return items;
+                })
+                setItems(data);
             } else {
-                setItems(result); 
+                const queryRef = query(collection(database, "items"))
+                const response = await getDocs(queryRef)
+                const data = response.docs.map ( doc => {
+                    const items = {
+                        ...doc.data(),
+                        id: doc.id
+                    }
+                    return items;
+                })
+                setItems(data);
             }
-            
-        })
-    }, [categoryId]);
+        }
+        getData()
+    }, [product])
 
     return (
         <div className="itemListContainer">
