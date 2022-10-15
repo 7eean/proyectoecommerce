@@ -11,21 +11,21 @@ const CartProvider = ({children}) => {
         return duplicatedProduct;
     }
     
-    const addItem = (item, quantity) => {
+    const addItem = (items, quantity) => {
         const newProduct = {
-            ...item,
+            ...items,
             quantity,
         }
 
-        if(isInCart(item.id)) {
+        if(isInCart(items.id)) {
             const product = productCartList.findIndex(
-                (producto) => producto.id === item.id
+                (producto) => producto.id === items.id
             );
             const newArray = [...productCartList];
-            if (newArray[product].quantity + quantity < item.stock) {
+            if (newArray[product].quantity + quantity < items.stock) {
                 newArray[product].quantity = newArray[product].quantity + quantity;
             } else {
-                newArray[product].quantity = item.stock;
+                newArray[product].quantity = items.stock;
             }
             newArray[product].price = newArray[product].quantity * newArray[product].price;
             setProductCartList(newArray);
@@ -44,7 +44,7 @@ const CartProvider = ({children}) => {
     }
 
     const removeItem = (itemId) => {
-        const productsInCart = productCartList.filter(item => item.id !== itemId) 
+        const productsInCart = productCartList.filter(items => items.id !== itemId) 
         setProductCartList(productsInCart);
     }
 

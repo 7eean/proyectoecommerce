@@ -1,18 +1,9 @@
-.itemListContainer {
+.detail {
     display: flex;
     justify-content: center;
-    align-items: center; 
     min-height: 80vh;
-}
-
-.fotoIndex {
-   width: 100%;
-}
-
-.textoI {
-    text-align: center;
-    margin-bottom: 1rem;
-    width: 50vw ;
+    align-items: center;
+    flex-direction: column;
 }
 
 /* From uiverse.io by @abrahamcalsin */

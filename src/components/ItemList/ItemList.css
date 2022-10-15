@@ -1,0 +1,12 @@
+.itemRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titulos {
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}

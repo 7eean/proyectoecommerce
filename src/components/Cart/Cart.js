@@ -28,19 +28,21 @@ const Cart = () => {
             setOrderId(response.id);
         });
     }
+
     return (
         <div>
             {!orderId ?
                 <div>
-                    <h2 className='carritoElement'>Carrito:</h2>
+                    <h2 className='elementoCentrado'>Carrito:</h2>
                     <div className='cart carritoElement'>
                         {
                             productCartList.map((item) => {
                                 return (
                                     <div className='itemEnCarrito cartGrid' key={item.id}>    
+                                        <p className='cantidad'>{item.quantity}</p>
                                         <img src={item.pictureUrl} height="50px" className='producto' alt={item.description} />
                                         <p className='producto'>{item.title}</p>
-                                        <p className='precio'>$ {item.price}</p>
+                                        <p className='precio'>${item.price}</p>
                                         <div className='removerButton'>
                                             <button onClick={()=>removeItem(item.id)} className='remover'>Remover producto</button>
                                         </div>
@@ -89,7 +91,7 @@ const Cart = () => {
                     }
                 </div>
                 :
-                <h3>Tu orden ha sido registrada!</h3>
+                <h3 className='elementoCentrado'>Tu orden ha sido registrada!</h3>
             }
         </div>
     )

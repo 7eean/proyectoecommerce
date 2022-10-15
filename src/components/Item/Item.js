@@ -1,20 +1,21 @@
+import React from "react";
 import './Item.css';
-import ItemCount from "../ItemCount/ItemCount";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const Item = ({title, pictureUrl, price, id}) => {
+const Item = ({title, pictureUrl, description, price, id}) => {
   return (
-    <div className="item-container">
-        <div className='item col'>
-          <Link to={`/item/${id}`}>
-            <img className='col' src={pictureUrl} alt="Product" width="200px" height="250px" />
-          </Link>
-            <p className='col'><strong>{title}</strong></p>
-            <p className='col'>{price}</p>
-            <ItemCount stock="10" initial="1"/>
+        <div className="item">
+          <div className="contenidoItem">
+            <img src={pictureUrl} alt={description} width="250px"/>
+            <h2>{title}</h2>
+            <p>{description}</p>
+            <p>${price}</p>
+            <Link to={`/item/${id}`}>
+              <button>Ver</button>
+            </Link>
+          </div>
         </div>
-    </div>
-  );
+  ); 
 };
 
 export default Item;

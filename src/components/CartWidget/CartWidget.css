@@ -1,0 +1,25 @@
+.cart {
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.cartBg {
+    height: 40px;
+    min-width: 40px;
+    background: rgba(248,249,250);
+    border-radius: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.countingCart{
+    color: rgb(7, 211, 58);
+    text-decoration: none;
+    font-size: 1.5em;
+    margin-left: 2px;
+    margin-bottom: 14px;
+}

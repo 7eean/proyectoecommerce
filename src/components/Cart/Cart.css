@@ -1,0 +1,75 @@
+.elementoCentrado {
+    display: flex;
+    justify-content: center;
+}
+
+.cart {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.itemEnCarrito {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem;
+}
+
+.carritoElement {
+    margin-left: 1rem;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+}
+
+.cartGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr 1fr 2fr;
+    gap: 10px;
+    grid-template-areas: 
+    "cantidad imagen nombre precio remover";
+}
+
+.cantidad {
+    grid-area: cantidad;
+}
+.imagen {
+    grid-area: imagen;
+}
+.nombre {
+    grid-area: nombre;
+}
+.precio {
+    grid-area: precio;
+}
+.remover {
+    grid-area: remover;
+}
+
+.removerButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    width: 50vw;
+    padding: 1rem;
+    padding-top: .1rem;
+    margin: 1rem 0;
+}
+fieldset {
+    padding: 1rem;
+    padding-top: .1rem;
+}
+input {
+    padding: .2rem;
+    width: 100%;
+}
+.button {
+    background-color: rgb(191, 236, 232);
+    border: solid 1px black;
+    margin-top: .5rem;
+}

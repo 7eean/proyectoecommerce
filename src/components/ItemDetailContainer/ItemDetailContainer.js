@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail';
+import './ItemDetailContainer.css';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { doc, getDoc } from 'firebase/firestore';
@@ -26,25 +27,16 @@ const ItemDetailContainer = () => {
     return (
         <div className='detail'>
             {!items ? (<h3 className='cargando'>Cargando...</h3>) : (
-            <ItemDetail
+            <ItemDetail 
+                item={items}
                 title={items.title}
                 description={items.description}
                 pictureUrl={items.pictureUrl}
-                key={items.id}
-                origin={items.origin}
-                year={items.year}
-                product={items.product}
-                materials={items.materials}
-                cristal={items.cristal}
-                water={items.water}
-                joyas={items.joyas}
-                hebilla={items.hebilla}
                 price={items.price}
-                picturehoz={items.picturehoz}
-                pictureaside={items.pictureaside}
+                key={items.id}
             />
-            )}
-        </div>  
+            )}            
+        </div>
     );
 }
 
