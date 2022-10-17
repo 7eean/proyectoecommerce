@@ -83,7 +83,7 @@ const ItemListContainer = () => {
                         <div className="elementoCentrado">
                             <p className="elementoCentrado textoI">Jacob & Co.'s mission is to create beautiful, dynamic and unique pieces of watchmaking and jewelry art.</p>
                         </div>
-                        <h2 className="elementoCentrado titulos" id="catalogo">Nuestro catálogo:</h2>
+                        <h2 className="elementoCentrado titulos" id="catalogo">Timepieces and Accessories:</h2>
                     </div>
                 </div>
                 }

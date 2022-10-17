@@ -114,3 +114,11 @@
     }
   }
   
+
+  
+@media (max-width: 720px){
+  .itemDetail{
+      display: flex;
+      flex-direction: column;
+  }
+}

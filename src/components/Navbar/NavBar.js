@@ -22,7 +22,7 @@ const NavBar= () => {
                 <NavLink to="/categoria/Jacob&Co" aria-current={'page'} className={"nav-link active"}>Timepieces</NavLink>
                 </li>
                 <li class="nav-item">
-                <NavLink to="/categoria/shapemods" aria-current={'page'} className={"nav-link active"}>Exclusives</NavLink>
+                <NavLink to="/categoria/Accessories" aria-current={'page'} className={"nav-link active"}>Accessories</NavLink>
                 </li>
             </ul>
             </div>

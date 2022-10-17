@@ -39,8 +39,8 @@ const Cart = () => {
                             productCartList.map((item) => {
                                 return (
                                     <div className='itemEnCarrito cartGrid' key={item.id}>    
-                                        <p className='cantidad'>{item.quantity}</p>
-                                        <img src={item.pictureUrl} height="50px" className='producto' alt={item.description} />
+                                        <p className='cantidad'> x{item.quantity}</p>
+                                        <img src={item.pictureUrl} height="150px" className='producto' alt={item.description} />
                                         <p className='producto'>{item.title}</p>
                                         <p className='precio'>${item.price}</p>
                                         <div className='removerButton'>
@@ -54,14 +54,17 @@ const Cart = () => {
                     {
                         productCartList.length > 0 ?
                         <div className='total'>
-                            <div className='elementoCentrado'>
+                            <div className='elementoCentrado vaciar'>
                                 <h3 className='carritoElement'>Total: ${getTotalPrice()}</h3>
                                 <button onClick={()=>clearCart()} className='carritoElement'>Vaciar carrito</button>
+                                <Link to={"/categoria/Jacob&Co"}>
+                                    <button className='carritoElement'>Seguir comprando</button>
+                                </Link>
                             </div>
                             <div className='elementoCentrado'>
                                 <form onSubmit={sendOrder}>
-                                    <fieldset> 
-                                        <legend><strong>Enviar pedido:</strong></legend>
+                                    <fieldset className='fieldsetContainer'> 
+                                        <legend><strong>Finalizar compra:</strong></legend>
                                         <div>
                                             <label for="nombre">Nombre:</label>
                                             <input type="text" name="name" />
@@ -84,7 +87,7 @@ const Cart = () => {
                             </div>
                         </div>
                         :
-                        <div className='elementoCentrado'>
+                        <div className='elementoCentrado empty'>
                             <p className='carritoElement'>El carrito está vacío</p>
                             <Link to='/' className='carritoElement'><button>Ver productos</button></Link>
                         </div>

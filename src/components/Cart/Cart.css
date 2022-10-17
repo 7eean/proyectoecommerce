@@ -16,6 +16,11 @@
     padding: 1rem;
 }
 
+.fieldsetContainer{
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px;
+}
+
 .carritoElement {
     margin-left: 1rem;
 }
@@ -31,6 +36,10 @@
     gap: 10px;
     grid-template-areas: 
     "cantidad imagen nombre precio remover";
+}
+
+.vaciar{
+    margin-top: 3em;
 }
 
 .cantidad {
@@ -55,9 +64,9 @@
 }
 
 form {
-    width: 50vw;
-    padding: 1rem;
-    padding-top: .1rem;
+    width: 40vw;
+    padding: 1em;
+    padding-top: 3em;
     margin: 1rem 0;
 }
 fieldset {
@@ -67,9 +76,54 @@ fieldset {
 input {
     padding: .2rem;
     width: 100%;
+    border: none;
+    margin-bottom: 0.8em;
+    border-radius: 10px;
+}
+label{
+    margin-top: 0.5em;
+}
+legend{
+    text-align: center;
 }
 .button {
-    background-color: rgb(191, 236, 232);
-    border: solid 1px black;
-    margin-top: .5rem;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #030c58;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;   
+        height: 50px;
+        margin-top: 1.5em;
+}
+
+.button:hover{
+    background-color: #010522;
+    box-shadow: 0px 10px 15px rgba(46, 46, 229, 0.4);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+.empty{
+    margin-top: 200px;
+}
+
+@media (max-width: 720px) {
+    .cartGrid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        width: 90vw;
+        padding: 1em;
+        padding-top: 3em;
+        margin: 1rem 0;
+    }
 }
