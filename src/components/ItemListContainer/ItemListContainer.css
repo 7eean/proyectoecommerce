@@ -11,8 +11,19 @@
 
 .textoI {
     text-align: center;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     width: 50vw ;
+    margin-top: 1em;
+}
+
+.h3{
+  color: #113972;
+  margin-top: 1em;
+}
+
+.tittles{
+  margin-top: 2em;
+  margin-bottom: 1.5em;
 }
 
 /* From uiverse.io by @abrahamcalsin */
@@ -119,4 +130,5 @@
       opacity: 1;
     }
   }
-  
+
+

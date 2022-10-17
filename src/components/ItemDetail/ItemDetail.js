@@ -5,7 +5,7 @@ import { CartContext } from '../../context/CartContext';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const ItemDetail = ({item, title, pictureUrl, description, price}) => {
+const ItemDetail = ({item, title, pictureUrl, description, price, origin, materials, stock}) => {
     const {addItem} = useContext(CartContext);
 
     const [contador, setContador] = useState("-");
@@ -16,19 +16,26 @@ const ItemDetail = ({item, title, pictureUrl, description, price}) => {
     }
 
     return (
-        <div className='itemDetail'>
-            <h1>Detalle {title}</h1>
-            <img src={pictureUrl} alt={description} height="300px" />
-            <p>{description}</p>
-            <p>${price}</p>
-            <ItemCount nombreProducto="Producto" stock={item.stock} initial={1} onAdd={onAdd} />
-            <p>Cantidad: {contador}</p>
-            {
-                contador > 0 ?
-                <Link to='/cart'><button>Finalizar compra</button></Link>
-                :
-                ''
-            }
+        <div className='itemDetail-container'>
+            <div className='itemDetail'>
+                <img className='itemImg' src={pictureUrl} alt={description} />
+                <div className='description-container2'>
+                    <h2 className='itemTitle'>{title}</h2>
+                    <p className='itemDesc'>Marca: {description}</p>
+                    <p className='itemDesc'>Materiales: {materials}</p>
+                    <p className='itemOrigin'>Origen: {origin}</p>
+                    <h4 className='itemPrice'>$ {price}</h4>
+                    <p className='itemOrigin'>Disponibles: {stock}</p>
+                    <div className='b2'><ItemCount nombreProducto="Cantidad" stock={item.stock} initial={1} onAdd={onAdd} /></div>
+                        {
+                            contador > 0 ?
+                            <><p className='itemOrigin'>Seleccionados: {contador}</p><Link to='/cart' className='b2'><button className='b5'>Comprar ahora</button></Link><Link to='/categoria/Jacob&Co'>
+                            <button>Seguir comprando</button></Link></>
+                            :
+                            ''
+                        }
+                </div>
+            </div>
         </div>
     )
 }

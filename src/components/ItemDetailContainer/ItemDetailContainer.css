@@ -1,11 +1,14 @@
-.detail {
-    display: flex;
-    justify-content: center;
-    min-height: 80vh;
-    align-items: center;
-    flex-direction: column;
+.itemDetail{
+  display: grid;
+  grid-template-areas: "uno description-container";
+  padding: 2em;
 }
 
+.cargando{
+  display: grid;
+    justify-content: center;
+    align-items: center; 
+}
 /* From uiverse.io by @abrahamcalsin */
 .dot-spinner {
     --uib-size: 2.8rem;

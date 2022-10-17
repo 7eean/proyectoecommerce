@@ -1,4 +1,4 @@
-.itemDetail {
+/* .itemDetail {
     display: flex;
     border: 2px solid black;
     padding: 15px;
@@ -7,4 +7,98 @@
     justify-content: center;
     align-items: center;
     width: 50%;
+} */
+
+.itemDetail{
+    display: grid;
+    grid-template-areas: "uno" "description-container"
+    "uno" "description-container";
+    padding: 2em;
+}
+
+.description-container2{
+    grid-area: description-container;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.itemImg{
+   text-align: center;
+   padding-left: 250px;
+}
+
+.description-container{
+    text-align:left;
+    margin-left: 50px;
+    grid-area: descp;
+    display: grid;
+    grid-template-areas:
+    "descp descp" 
+    "anio mate"
+    "cristal water"
+    "cant hebi";
+    padding: 2em;
+}
+
+.itemTitle{
+    grid-area: h2;
+    margin: 20px;
+}
+
+.itemDesc{
+    grid-area: descripcion;
+    margin: 10px;
+}
+
+.itemPrice{
+    grid-area: precio;
+    margin-top: 50px;
+}
+
+.itemOrigin{
+    grid-area: origen;
+    margin: 5px;
+}
+
+.itemPais{
+    grid-area: pais;
+}
+
+.itemProduct{
+    grid-area: tipo;
+}
+
+.itemYear{
+    grid-area: anio;
+}
+
+.itemGraduation{
+    grid-area: graduacion;
+}
+
+.b2{
+    padding: 0.5em;
+}
+
+.b5{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #030c58;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+}
+
+.b5:hover {
+    background-color: #010522;
+    box-shadow: 0px 10px 15px rgba(46, 46, 229, 0.4);
+    color: #fff;
+    transform: translateY(-4px);
 }

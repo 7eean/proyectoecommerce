@@ -1,11 +1,7 @@
 .item {
-    padding: 10px;
-    margin: 10px;
-    border: solid 1px black;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 300px;
+    display: inline-block;
+    padding: 3em;
+    
 }
 
 .contenidoItem {

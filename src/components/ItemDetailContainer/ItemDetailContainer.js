@@ -26,7 +26,16 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='detail'>
-            {!items ? (<h3 className='cargando'>Cargando...</h3>) : (
+            {!items ? (<h3 className='cargando'><div className="dot-spinner">
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                            <div className="dot-spinner__dot"></div>
+                        </div></h3>) : (
             <ItemDetail 
                 item={items}
                 title={items.title}
@@ -34,6 +43,9 @@ const ItemDetailContainer = () => {
                 pictureUrl={items.pictureUrl}
                 price={items.price}
                 key={items.id}
+                origin={items.origin}
+                materials={items.materials}
+                stock={items.stock}
             />
             )}            
         </div>

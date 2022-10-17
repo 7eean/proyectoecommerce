@@ -6,12 +6,14 @@ const Item = ({title, pictureUrl, description, price, id}) => {
   return (
         <div className="item">
           <div className="contenidoItem">
-            <img src={pictureUrl} alt={description} width="250px"/>
-            <h2>{title}</h2>
+            <Link to={`/item/${id}`}>
+              <img src={pictureUrl} alt={description} width="250px"/>
+            </Link>  
+            <h5>{title}</h5>
             <p>{description}</p>
             <p>${price}</p>
             <Link to={`/item/${id}`}>
-              <button>Ver</button>
+              <button>Conocer</button>
             </Link>
           </div>
         </div>
