@@ -1,10 +1,10 @@
-# Getting Started with Create React App
+# Proyecto final React Js :milky_way: CoderHouse :four_leaf_clover: 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## E-Commerce con énfasis en los relojes de Jacob&Co 
 
-## Available Scripts
+El proyecto consiste en un Ecommerce de relojes Jacob&Co 
 
-In the project directory, you can run:
+## Getting started in this repository: 
 
 ### `npm start`
 
