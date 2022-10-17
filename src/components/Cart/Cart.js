@@ -81,7 +81,7 @@ const Cart = () => {
                                             <label for="numero">Número de telefono:</label>
                                             <input type="number" name="number" />
                                         </div>
-                                        <input type="submit" value="Guardar orden" className="button" /> <input type="reset" value="Borrar" className="button" />
+                                        <input type="submit" value="Finalizar compra" className="button" /> <input type="reset" value="Reset" className="button" />
                                     </fieldset>
                                 </form>
                             </div>
@@ -94,7 +94,7 @@ const Cart = () => {
                     }
                 </div>
                 :
-                <h3 className='elementoCentrado'>Tu orden ha sido registrada!</h3>
+                <h3 className='elementoCentrado'>Muchas gracias por tu compra! Hemos registrado tu orden.</h3>
             }
         </div>
     )
