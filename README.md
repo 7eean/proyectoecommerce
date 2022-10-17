@@ -4,6 +4,14 @@
 
 El proyecto consiste en un Ecommerce de relojes Jacob&Co 
 
+## Video demonstration of Web Page
+![alt text](https://github.com/7eean/proyectoecommerce/blob/main/Web.gif)
+
+## Video demonstration Mobile First
+![alt text](https://github.com/7eean/proyectoecommerce/blob/main/Mobile-first.gif)
+
+## Thanks for watching :milky_way: :four_leaf_clover:
+
 ## Getting started in this repository: 
 
 ### `npm start`
